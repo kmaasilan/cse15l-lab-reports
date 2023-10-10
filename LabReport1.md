@@ -22,28 +22,28 @@
   * The terminal listed the files and folders in the working directory because ls stands for "list", and, since I did not specify a directory, ls defaulted to the current working directory. I am assuming that ls defaults to the current working directory both because it is convenient and because ls can assume the current working directory exists; otherwise, you would not be able to access the current working directory.
   * Not an error
 2. Path to a Directory as an Argument:
-  * Screenshot:![Image](ls_dirArg_sshot.PNG)
+  * Screenshot: ![Image](ls_dirArg_sshot.PNG)
   * When the command was run, the working directory was `~/lecture1`.
   * The terminal listed the files and folders in the `~/lecture1/messages` directory because ls stands for "list", and, since I specified the relative path to the `messages` directory, ls listed the files and folders in the specified directory.
   * Not an error
 3. Path to a File as an Argument
-  * Screenshot:![Image](ls_fileArg_sshot.PNG)
+  * Screenshot: ![Image](ls_fileArg_sshot.PNG)
   * When the command was run, the working directory was `~/lecture1`.
   * The terminal listed `README` because ls stands for "list", and, since I specified the relative path to the `README` file, ls listed the specified file. I am assuming that running ls with a path to a file as an argument is like a search function and can be used to check if a certain file is in a certain directory.
   * Not an error
 ## `cat`
 1. No Arguments:
-   * Screenshot:![Image](cat_noArgs_sshot.PNG)
+   * Screenshot: ![Image](cat_noArgs_sshot.PNG)
    * When the command was run, the working directory was `~/lecture1`.
    * My cursor jumped to a new line with no prompt; whatever I typed and entered was printed back to me in the terminal. I had to press ctrl-c to interrupt cat, exit the prompt free space, and have my cursor jump to a new line with a prompt. I am assuming the cat command does not know what to do when there is no argument. I think cat gets stuck running without terminating because cat stands for "concatenate" and concatenates and prints out files, and, when cat was stuck running, everything I entered in the prompt free space was echoed back to me. Additionally, I had to interrupt cat to regain control of the terminal.
    * The output is an error because the cat command was stuck running; I had to interrupt cat using ctrl-c in order to regain control of terminal.
 2. Path to a Directory as an Argument:
-   *Screenshot:![Image](cat_dirArg_sshot.PNG)
+   *Screenshot: ![Image](cat_dirArg_sshot.PNG)
    *Current Working Directory: `~/lecture1`.
    *The terminal printed "cat: messages: Is a directory" when I tried to run the cat command using the relative path to `messages` as an argument. Since cat stands for "concatenate" and works by concatenating the contents of a file and printing them to the terminal, it makes sense that cat would not work with a path ro a directory as an argument because the contents of a folder can be printed to the terminal using `ls`.
    * Output is not an error.
 3. Path to a File as an Argument:
-  * Screenshot:![Image](cat_fileArg_sshot.PNG)
+  * Screenshot: ![Image](cat_fileArg_sshot.PNG)
   * Current Working Directory: `~/lecture1`.
   * The terminal printed the contents of the README file because cat stands for "concatenate", and, since I specified the relative path to the README file, concatenate concatenated the contents of the specified file and printed them to the terminal.
   * Output is not an error.
