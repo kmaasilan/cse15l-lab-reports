@@ -1,7 +1,7 @@
 # Lab Report 1 - Remote Access and FileSystem (Week 1)
 ## `cd`
 1. No Arguments
-  * Screenshot: ![Image](cd_noArgs_sshot.png)
+  * Screenshot: ![Image](cd_noArgs_sshot.PNG)
   * When the command was run, the working directory was `~/lecture1`.
   * My working directory was changed to the root directory because cd stands for "change directory", and, since I did not specify a directory, cd defaulted to the root directory. I am assuming that a root directory is a given in a linux filesystem, so, when a directory is not specified, the terminal defaults to a directory that is known to exist.
   * Not an error
