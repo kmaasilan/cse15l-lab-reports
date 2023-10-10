@@ -6,18 +6,18 @@
   * My working directory was changed to the root directory because cd stands for "change directory", and, since I did not specify a directory, cd defaulted to the root directory. I am assuming that a root directory is a given in a linux filesystem, so, when a directory is not specified, the terminal defaults to a directory that is known to exist.
   * Not an error
 2. Path to a Directory as an Argument
-  * Screenshot:![Image](cd_dirArg_sshot.PNG)
+  * Screenshot: ![Image](cd_dirArg_sshot.PNG)
   * When the command was run, the working directory was `~/`.
   * My working directory was changed to `~/lecture1` because cd stands for "change directory", and, since I specified the `lecture1` directory, cd changed my working directory to the specified directory.
   * Not an error
 3. Path to a File as an Argument
-  * Screenshot:![Image](cd_fileArg_sshot.PNG)
+  * Screenshot: ![Image](cd_fileArg_sshot.PNG)
   * When the command was run, the working directory was `~/lecture1`.
   * The terminal printed "bash: cd: README: Not a directory" because cd stands for "change directory", so cd takes a directory, not a file, as input.
   * Not an error
 ## `ls`
 1. No Arguments:
-  * Screenshot:![Image](ls_noArgs_sshot.PNG)
+  * Screenshot: ![Image](ls_noArgs_sshot.PNG)
   * When the command was run, the working directory was `~/lecture1`.
   * The terminal listed the files and folders in the working directory because ls stands for "list", and, since I did not specify a directory, ls defaulted to the current working directory. I am assuming that ls defaults to the current working directory both because it is convenient and because ls can assume the current working directory exists; otherwise, you would not be able to access the current working directory.
   * Not an error
