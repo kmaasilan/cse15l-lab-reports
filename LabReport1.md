@@ -10,7 +10,7 @@
    * Screenshot:  
     ![Image](cd_dirArg_sshot.PNG)
    * When the command was run, the working directory was `/home`
-   * My working directory was changed to `/home/lecture1` because cd stands for "change directory", and, since I specified the `lecture1` directory, cd changed my working directory to the specified directory.
+   * My working directory was changed to `/home/lecture1` because cd stands for "change directory", and, since I specified the relative path to the `lecture1` directory, cd changed my working directory to the specified directory.
    * Not an error
 3. Path to a File as an Argument
    * Screenshot:  
