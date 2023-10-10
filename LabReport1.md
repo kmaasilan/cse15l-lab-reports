@@ -4,7 +4,7 @@
    * Screenshot:  
     ![Image](cd_noArgs_sshot.PNG)
    * When the command was run, the working directory was `/home/lecture1/messages`.
-   * My working directory was changed to the root directory because cd stands for "change directory", and, since I did not specify a directory, cd defaulted to the root directory. I am assuming that a root directory is a given in a linux filesystem, so, when a directory is not specified, the terminal defaults to a directory that is known to exist.
+   * My working directory was changed to the root directory because cd stands for "change directory", and, since I did not specify a directory, cd defaulted to the root directory. I am assuming that a root directory is a given in a unix filesystem, so, when a directory is not specified, the terminal defaults to a directory that is known to exist.
    * Output is not an error.
 2. Path to a Directory as an Argument
    * Screenshot:  
