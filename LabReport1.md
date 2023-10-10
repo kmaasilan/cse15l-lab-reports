@@ -9,32 +9,33 @@
 2. Path to a Directory as an Argument
    * Screenshot:  
     ![Image](cd_dirArg_sshot.PNG)
-   * When the command was run, the working directory was `/home`
+   * When the command was run, the working directory was `/home`.
    * My working directory was changed to `/home/lecture1` because cd stands for "change directory", and, since I specified the relative path to the `lecture1` directory, cd changed my working directory to the specified directory.
    * Output is not an error.
 3. Path to a File as an Argument
    * Screenshot:  
     ![Image](cd_fileArg_sshot.PNG)
-   * When the command was run, the working directory was `/home/lecture1`
-   * The terminal printed "bash: cd: README: Not a directory" because cd stands for "change directory", so cd takes a directory, not a file, as input.
+   * When the command was run, the working directory was `/home/lecture1`.
+   * The terminal printed `bash: cd: README: Not a directory` because cd stands for "change directory", so cd takes a directory, not a file, as input.
    * Output is not an error.
+
 ## `ls`
 1. No Arguments:
    * Screenshot:  
     ![Image](ls_noArgs_sshot.PNG)
-   * When the command was run, the working directory was `/home/lecture1`
-   * The terminal listed the files and folders in the working directory because ls stands for "list", and, since I did not specify a directory, ls defaulted to the current working directory. I am assuming that ls defaults to the current working directory both because it is convenient and because ls can assume the current working directory exists; otherwise, you would not be able to access the current working directory.
+   * When the command was run, the working directory was `/home/lecture1`.
+   * The terminal listed the files and folders in the working directory because ls stands for "list", and, since I did not specify a directory, ls defaulted to the current working directory. I am assuming that ls defaults to the current working directory because it is convenient and because ls can assume the current working directory exists; you would not be able to access the current working directory if it did not exist.
    * Output is not an error.
 2. Path to a Directory as an Argument:
    * Screenshot:  
     ![Image](ls_dirArg_sshot.PNG)
-   * When the command was run, the working directory was `/home/lecture1`
+   * When the command was run, the working directory was `/home/lecture1`.
    * The terminal listed the files and folders in the `/home/lecture1/messages` directory because ls stands for "list", and, since I specified the relative path to the `messages` directory, ls listed the files and folders in the specified directory.
    * Output is not an error.
 3. Path to a File as an Argument
    * Screenshot:  
     ![Image](ls_fileArg_sshot.PNG)
-   * When the command was run, the working directory was `/home/lecture1`
+   * When the command was run, the working directory was `/home/lecture1`.
    * The terminal listed `README` because ls stands for "list", and, since I specified the relative path to the `README` file, ls listed the specified file. I am assuming that running ls with a path to a file as an argument is like a search function and can be used to check if a certain file is in a certain directory.
    * Output is not an error.
 ## `cat`
