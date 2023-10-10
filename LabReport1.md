@@ -43,45 +43,18 @@
 1. No Arguments:
    * Screenshot:  
      ![Image](cat_noArgs_sshot.PNG)
-   * When the command was run, the working directory was `/home/lecture1`
-   * My cursor jumped to a new line with no prompt; whatever I typed and entered was printed back to me in the terminal. I had to press ctrl-c to interrupt cat, exit the prompt free space, and have my cursor jump to a new line with a prompt. I am assuming the cat command does not know what to do when there is no argument. I think cat gets stuck running without terminating because cat stands for "concatenate" and concatenates and prints out files, and, when cat was stuck running, everything I entered in the prompt free space was echoed back to me. Additionally, I had to interrupt cat to regain control of the terminal.
-   * The output is an error because the cat command was stuck running; I had to interrupt cat using ctrl-c in order to regain control of terminal.
+   * When the command was run, the working directory was `/home/lecture1`.
+   * My cursor jumped to a new line with no prompt; whatever I typed and entered was printed back to me in the terminal. I had to press ctrl-c to interrupt cat, exit the prompt free space, and have my cursor jump to a new line with a prompt. I am assuming the cat command does not know what to do when there is no argument. I think cat gets stuck running without terminating because cat stands for "concatenate" and works by concatenatenating and printing out files, and, when cat was stuck running, everything I entered in the prompt free space was echoed back to me. Additionally, I had to interrupt cat to regain control of the terminal.
+   * The output is an error because the cat command was stuck running; I had to interrupt cat using ctrl-c in order to regain control of the terminal.
 2. Path to a Directory as an Argument:
    * Screenshot:  
      ![Image](cat_dirArg_sshot.PNG)
-   * When the command was run, the working directory was `/home/lecture1`
-   * The terminal printed "cat: messages: Is a directory" when I tried to run the cat command using the relative path to `messages` as an argument. Since cat stands for "concatenate" and works by concatenating the contents of a file and printing them to the terminal, it makes sense that cat would not work with a path ro a directory as an argument because the contents of a folder can be printed to the terminal using `ls`.
+   * When the command was run, the working directory was `/home/lecture1`.
+   * The terminal printed "cat: messages: Is a directory" when I tried to run the cat command using the relative path to `messages` as an argument. Since cat stands for "concatenate" and works by concatenating the contents of a file and printing them to the terminal, it makes sense that cat would not work with a path to a directory as an argument because cat is expecting its arguments to be paths to files. Additionally, the contents of a folder can be printed to the terminal using `ls`.
    * Output is not an error.
 4. Path to a File as an Argument:
    * Screenshot:  
     ![Image](cat_fileArg_sshot.PNG)
-   * When the command was run, the working directory was `/home/lecture1`
-   * The terminal printed the contents of the README file because cat stands for "concatenate", and, since I specified the relative path to the README file, concatenate concatenated the contents of the specified file and printed them to the terminal.
+   * When the command was run, the working directory was `/home/lecture1`.
+   * The terminal printed the contents of the README file because cat stands for "concatenate", and, since I specified the relative path to the `README` file, cat concatenated the contents of the specified file and printed them to the terminal.
    * Output is not an error.
-
-## Rough Draft:
-1 cd no argumemessants
-Working directory: lecture1 folder
-My working directory was changed to the root directory. I guess this makes sense because the change directory command changes directory and if you don't specify any directories it will assume the root directory because the root directory must exist. any directory can be accessed from the root directory, so it must be the default directory.
-2 cd directory argument
-Working directory: lecture1 folder
-3 cd file argument
-Working directory: lecture1 folder
-4 ls no arguments
-Working directory: lecture1 folder
-The folders and files in the working directory, in this case lecture1, were listed. I guess this makes sense because the ls commands lists files, so it should work when I list files in my present directory.
-5 ls directory argument
-Working directory: lecture1 folder
-The folders and files in the specified directory, in this case messages, were listed. I guess this makes sense because the ls commands lists files, so it should work to list files in a specified directory.
-6 ls file argument
-Working directory: lecture1 folder
-It just echoes the name of the file back at me. I guess this makes sense because the ls command lists 
-7 cat no arguments
-Working directory: lecture1 folder
-My cursor jumped to the next line, and the [user@sahara /home/lecture1] prompt wasn't present in this line. I could still type, but I had to press ctrl c to get the [user@sahara /home/lecture1] prompt to reappear. If I pressed enter after typing something, the command line would print what I typed back to me. I guess this makes sense because the cat command concatennates the strings in a file and prints them out on the command line. I guess cat must be expecting an end of file in order to terminate running, 
-8 cat directory argument
-Working directory: lecture1 folder
-The command prompt told me that messages is a directory. This makes sense because there is no text to concatenate in a directory as it is not a file. 
-9 cat file argument
-Working directory: lecture1 folder
-The command prompt printed out the text in the file. This makes sense because cat concattenates the string in the text file and then prints it out.
