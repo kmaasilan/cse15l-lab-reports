@@ -38,6 +38,7 @@
    * When the command was run, the working directory was `/home/lecture1`.
    * The terminal listed `README` because ls stands for "list", and, since I specified the relative path to the `README` file, ls listed the specified file. I am assuming that running ls with a path to a file as an argument is like a search function and can be used to check if a certain file is in a certain directory.
    * Output is not an error.
+
 ## `cat`
 1. No Arguments:
    * Screenshot:  
