@@ -65,17 +65,17 @@ class NumberServer {
 
 ## `Part 2`
 
-* The path to the *private* key for my SSH key for logging into **ieng6**  
+* The path to the *private* key for my SSH key for logging into **ieng6**:  
   ![Image](CSE15L_Lab2_Part21_kmaas.PNG)  
   
   ***  
   
-* The path to the *public* key for my SSH key for logging into **ieng6**  
+* The path to the *public* key for my SSH key for logging into **ieng6**:  
   ![Image](CSE15L_Lab2_Part23_kmaas.PNG)
   
   ***
   
-* A terminal interaction where I long into **ieng6** with my course-specific account without being asked for a password  
+* A terminal interaction where I log into **ieng6** with my course-specific account without being asked for a password:  
   ![Image](CSE15L_Lab2_Part22_kmaas.PNG)
   
   ***
