@@ -56,11 +56,11 @@ class NumberServer {
    * Relevant Arguments: The URI url argument was passed localhost:4000/add-message?s=ROASTED%20WITH%20SEA%20SALT%20PISTACHIOS.
    * Values of Relevant Fields of the Class: The value of output had "2. ROASTED WITH SEA SALT PISTACHIOS\n" appended to its end, and then the value of num was incremented by 1 to 3.
 ## `Part 2`
-* The path to the *private* key for my SSH key for logging into **ieng6**
-  ![Image](CSE15L_Lab2_Part2_1.PNG)
-  ***Note!** I am accessing /c/Users/lokes because this used to be my brother's laptop; his name is Lokesh Kumaraguru. I never got around to setting up my own account, so all my files are under his account in /c/Users/lokes.*
-* The path to the *public* key for my SSH key for logging into **ieng6**
-  ![Image](CSE15L_Lab2_Part2_2.PNG)
-* A terminal interaction where I long into **ieng6** with my course-specific account without being asked for a password
-  ![Image](CSE15L_Lab2_Part2_3.PNG)
-  ***Note!** I am accessing /c/Users/lokes because this used to be my brother's laptop; his name is Lokesh Kumaraguru. I never got around to setting up my own account, so all my files are under his account in /c/Users/lokes.*
+* The path to the *private* key for my SSH key for logging into **ieng6**  
+  ![Image](CSE15L_Lab2_Part21_kmaas.PNG)
+* The path to the *public* key for my SSH key for logging into **ieng6**  
+  ![Image](CSE15L_Lab2_Part23_kmaas.PNG)
+* A terminal interaction where I long into **ieng6** with my course-specific account without being asked for a password  
+  ![Image](CSE15L_Lab2_Part22_kmaas.PNG)
+## `Part 3`
+* I learned about `Mkdir` from lab in week 3. Basically, I made the `.ssh` directory on the remote server using `Mkdir`. I thought it was interesting how adding a period before a directory name makes the directory invisible to ls. I learned that, in order to view a directory with a leading period, you need to specify `ls -a`. `Mkdir` also made me think about directory and file permissions; how you would go about specifying who can and can't open a file/directory? Eventually, I learned `ls -l` lets you check file/directory permissions, but I'm not confident on what these permissions mean. I also wondered whether it's be possible to lock a directory behind a password.
