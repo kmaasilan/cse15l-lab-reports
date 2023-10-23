@@ -50,7 +50,9 @@ class NumberServer {
    ![Image](CSE15L_Lab2_StringSearchSSH1.PNG)
    * Methods Called: handleRequest
    * Relevant Arguments: The URI url argument was passed localhost:4000/add-message?s=DURACELL%20POWER%20BOOST.
-   * Values of Relevant Fields of the Class: The value of output had "1. DURACELL POWER BOOST\n" appended to its end, and then the value of num was incremented by 1 to 2.
+   * Values of Relevant Fields of the Class: The string output is left empty and the integer num is set to 1.
+   * Changes to Values of Relevant Fields of the Class Due to this Request: The value of output had "1. DURACELL POWER BOOST\n" appended to its end, and then the value of num was incremented by 1 to 2.
+     
 2. Screenshot:  
    
    ***  
@@ -58,7 +60,8 @@ class NumberServer {
    ![Image](CSE15L_Lab2_StringSearchSSH2.PNG)
    * Methods Called: handleRequest
    * Relevant Arguments: The URI url argument was passed localhost:4000/add-message?s=ROASTED%20WITH%20SEA%20SALT%20PISTACHIOS.
-   * Values of Relevant Fields of the Class: The value of output had "2. ROASTED WITH SEA SALT PISTACHIOS\n" appended to its end, and then the value of num was incremented by 1 to 3.
+   * Values of Relevant Fields of the Class: The string output is left empty and the integer num is set to 1.
+   * Changes to Values of Relevant Fields of the Class Due to this Request: The value of output had "2. ROASTED WITH SEA SALT PISTACHIOS\n" appended to its end, and then the value of num was incremented by 1 to 3.
 
 ## `Part 2`
 
