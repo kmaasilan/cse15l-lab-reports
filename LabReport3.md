@@ -96,7 +96,22 @@ I'm choosing the bug in the merge method in ListExamples.java.
     return result;
   }
 ```   
+The fix addresses the issue because the issue was that the last while never terminated. The last while never terminated because, in order for the last while to terminate, index2 would need to be greater than or equal to list2.size(); however, neither the value in index2 or list2.size() was changed in the last while. Since incrementing index2 affects the while statement as index2 will eventually be greater than or equal to list2.size(), the while will eventually terminate. Thus, the issue of the last while not terminating will be solved if `index1 += 1;` is replaced with `index2 += 1`.  
+## `Part 2`  
 
+
+
+
+
+
+
+
+The fix addresses the issue because the issue was the fact that the last while never terminated. This was because index1 was being incremented while we were waiting for index2 to get larger than list2.size().
+In order for the while to terminate, we would need to do something that actually affects the while statement; 
+
+incrementing index2 affects the while statement as index2 will eventually get larger than list2.size()
+
+and the while will terminate. Thus, the issue of the last while not terminating will be solved.
 
 failure-inducing
 ```
