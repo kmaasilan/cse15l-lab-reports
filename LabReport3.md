@@ -40,7 +40,7 @@ I'm choosing the bug in the merge method in ListExamples.java.
 * The symptom, as the output of running the tests:  
 ![Image](Lab3_SSH_failureInducing+nonFailureInducing.PNG)  
 * The bug, as the before-and-after code change required to fix it:  
-* * Before code change:  
+  * Before code change:  
 ```
   // Takes two sorted list of strings (so "a" appears before "b" and so on),
   // and return a new list that has all the strings in both list in sorted order.
