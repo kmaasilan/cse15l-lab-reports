@@ -110,7 +110,7 @@ I'm choosing the `grep` command.
   The current directory is `/c/users/kmaas/documents/github/docsearch/technical`.  
   Command: `grep -r "U.S. national" .`  
   ![Image](Lab3_SSH_grep_-r_dir.PNG)\
-  The command printed two lines. These two lines contained "U.S. national", the specified phrase, and are from two different files in the current directory, the specified directory, and its sub-directories. This option is useful because it allows the user to run `grep` on all the files in a directory and its sub-directories. This option could be used to check whether you deleted all instances of a certain phrase in a directory and its sub-directories. If `grep -r _specified phrase_ .` prints nothing, then you successfully deleted all instances of that specfied phrase from a directory and its sub-directories.  
+  The command printed multiple lines. These lines contained "U.S. national", the specified phrase, and are from multiple different files in the current directory, the specified directory, and its sub-directories. This option is useful because it allows the user to run `grep` on all the files in a directory and its sub-directories. This option could be used to check whether you deleted all instances of a certain phrase in a directory and its sub-directories. If `grep -r _specified phrase_ .` prints nothing, then you successfully deleted all instances of that specfied phrase from a directory and its sub-directories.  
 _**Note! I specify -r in addition to future options because otherwise `grep` wouldn't work with a directory as input.**_
 * `-v` (prints all the lines in the specified file that did not contain the specified phrase):  
   [Source](https://en.wikibooks.org/wiki/Grep)
@@ -125,7 +125,7 @@ _**Note! I specify -r in addition to future options because otherwise `grep` wou
   The current directory is `~/Documents/GitHub/docsearch/technical/biomed`.  
   Command: `grep -r -v the .`  
   ![Image](Lab3_SSH_grep_-v_dir_part1.PNG)\
-  This command printed all the lines in the current directory, the specified directory, and its sub-directories that did not contain "Background", the specified phrase. This option is useful because it allows the user to `grep` for unique phrase in a batch of files. This option could be used to make sure that every lin in every file in a directory and its sub-directories is formatted in a certain way (e.g. If all lines in every file in a directory and its sub-directories should end in an !, use the `-v` option to make sure there are no lines that do not end in an !).  
+  This command printed all the lines in the current directory, the specified directory, and its sub-directories that did not contain "Background", the specified phrase. This option is useful because it allows the user to `grep` for unique phrases in a batch of files. This option could be used to make sure that every line in every file in a directory and its sub-directories is formatted in a certain way (e.g. If all lines in every file in a directory and its sub-directories should end in an !, use the `-v` option to make sure there are no lines that do not end in an !).  
 * `-c` (counts the number of lines which contain the specified phrase):  
   [Source](https://en.wikibooks.org/wiki/Grep)  
   * File:
@@ -136,7 +136,7 @@ _**Note! I specify -r in addition to future options because otherwise `grep` wou
   The current directory is `~/Documents/GitHub/docsearch/technical`.  
   Command: `grep -r -c "the" .`  
   ![Image](Lab3_SSH_grep_-c_dir.PNG)\
-  This command printed the number of lines in each file in the current directory, the specified directory, and its sub-directories that contained "the", the specified phrase. This command is useful for getting the counts of the lines that contain a phrase in a batch of files. This option could be used to get the total number of lines in a batch of files that contain the specified phrase (e.g. x lines in this batch of files contain the phrase y).
+  This command printed the number of lines in each file in the current directory, the specified directory, and its sub-directories that contained "the", the specified phrase. This command is useful for getting the counts of the lines that contain a phrase in a batch of files. This option could be used in a script to get the total number of lines in a batch of files that contain the specified phrase (e.g. x lines in this batch of files contain the phrase y).
 * `-n` (prints the specified phrase and the line it appears in):  
   [Source](https://www.gnu.org/software/grep/manual/grep.html)
   * File:
