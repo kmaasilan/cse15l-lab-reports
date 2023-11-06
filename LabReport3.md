@@ -123,20 +123,29 @@ useful for checking for unique lines in a file that deviates from what may be ex
 ![Image](Lab3_SSH_less.PNG)
 
 ![Image](Lab3_SSH_grep_-v_file.PNG)
+```
+grep -v "Background" 1471-2180-1-29.txt
+```
+prints all the lines in the specified file expect for lines containing the specified phrase
+useful for searching for a unique line maybe
 
 ![Image](Lab3_SSH_grep_-v_dir_part1.PNG)
-
+```
+grep -r -v the .
+```
+prints all the lines in the files in the specified directory and its sub directories that don't contain the specified phrase
+useful for checking for unique phrases in a batch of files
 
 
 same thing but recursively for all files in a fir and its sub dir useful for checking for unique lines in batches of files
 
 -c: counts the number of lines which contain the specified phrase
-![Image](Lab3_SSH_grep_-c_dir.PNG)
+![Image](Lab3_SSH_grep_-c_file.PNG)
 
 ![Image](Lab3_SSH_grep_-c_dir.PNG)
 
 -n: prints the line in which the specified phrase is located
-![Image](Lab3_SSH_grep_-n_dir.PNG)
+![Image](Lab3_SSH_grep_-n_file.PNG)
 
 ![Image](Lab3_SSH_grep_-n_dir.PNG)
 
