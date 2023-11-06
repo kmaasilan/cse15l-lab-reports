@@ -1,3 +1,102 @@
+# Lab Report 3 - Bugs and Commands (Week 5)  
+## `Part 1`  
+* A failure-inducing input for the buggy program, as a JUnit test and any associated code:  
+```  
+  //failure-inducing input
+  @Test
+  public void testMerge_failureInducing() {
+    List<String> input1 = new ArrayList<>();
+    input1.add("a");
+    input1.add("c");
+    List<String> input2 = new ArrayList<>();
+    input2.add("b");
+    input2.add("d");
+    List<String> expectedOutput = new ArrayList<>();
+    expectedOutput.add("a");
+    expectedOutput.add("b");
+    expectedOutput.add("c");
+    expectedOutput.add("d");
+    List<String> output = ListExamples.merge(input1, input2);
+    assertEquals(expectedOutput, output);
+  }
+```  
+* An input that _doesn't_ induce a failure, as a JUnit test and any associated code:  
+```  
+  //non-failure-inducing input
+  @Test
+  public void testMerge_nonFailureInducing() {
+    List<String> input1 = new ArrayList<>();
+    input1.add("a");
+    input1.add("c");
+    List<String> input2 = new ArrayList<>();
+    List<String> expectedOutput = new ArrayList<>();
+    expectedOutput.add("a");
+    expectedOutput.add("c");
+    List<String> output = ListExamples.merge(input1, input2);
+    assertEquals(expectedOutput, output);
+  }
+```  
+* The symptom, as the output of running the tests:  
+![Image](Lab3_SSH_failureInducing+nonFailureInducing.PNG)  
+* The bug, as the before-and-after code change required to fix it:  
+* * Before code change:  
+    ```
+  // Takes two sorted list of strings (so "a" appears before "b" and so on),
+  // and return a new list that has all the strings in both list in sorted order.
+  static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      index1 += 1;
+    }
+    return result;
+  }
+    ```  
+  * After code change:  
+    ```
+  // Takes two sorted list of strings (so "a" appears before "b" and so on),
+  // and return a new list that has all the strings in both list in sorted order.
+  static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      index2 += 1;
+    }
+    return result;
+  }
+    ```   
+
+
 failure-inducing
 ```
 import static org.junit.Assert.*;
