@@ -97,6 +97,7 @@ I'm choosing the bug in the merge method in ListExamples.java.
       }
     ```   
 The fix addresses the issue because the issue was that the last while never terminated. The last while never terminated because, in order for the last while to terminate, index2 would need to be greater than or equal to list2.size(); however, neither the value in index2 or list2.size() was changed in the last while. Since incrementing index2 affects the while statement as index2 will eventually be greater than or equal to list2.size(), the while will eventually terminate. Thus, the issue of the last while not terminating will be solved if `index1 += 1;` is replaced with `index2 += 1`.  
+
 ## `Part 2`  
 I'm choosing the `grep` command.  
 * `-r` (recursively searches for the specified phrase in the specified directory and its sub-directories):  
