@@ -122,9 +122,9 @@ grep -r "U.S. national" .
 useful for checking for unique lines in a file that deviates from what may be expected
 ![Image](Lab3_SSH_less.PNG)
 
-![Image](Lab3_SSH_grep_-v_dir.PNG)
+![Image](Lab3_SSH_grep_-v_file.PNG)
 
-![Image](Lab3_SSH_grep_-v_dir.PNG)
+![Image](Lab3_SSH_grep_-v_dir_part1.PNG)
 
 
 
