@@ -1,5 +1,6 @@
 # Lab Report 3 - Bugs and Commands (Week 5)  
 ## `Part 1`  
+I'm choosing the bug in the merge method in ListExamples.java.
 * A failure-inducing input for the buggy program, as a JUnit test and any associated code:  
 ```  
   //failure-inducing input
