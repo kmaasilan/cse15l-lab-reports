@@ -125,7 +125,7 @@ I'm choosing the `grep` command.
   ![Image](Lab3_SSH_grep_-v_dir_part1.PNG)\
   This command printed all the lines in the current directory, the specified directory, and its sub-directories that did not contain "Background", the specified phrase. This option is useful because it allows the user to `grep` for unique phrase in a batch of files. This option could be used to make sure that every lin in every file in a directory and its sub-directories is formatted in a certain way (e.g. If all lines in every file in a directory and its sub-directories should end in an !, use the `-v` option to make sure there are no lines that do not end in an !).  
 * `-c` (counts the number of lines which contain the specified phrase):  
-  [Source](https://en.wikibooks.org/wiki/Grep)\
+  [Source](https://en.wikibooks.org/wiki/Grep)  
   * File:
   Command: `grep -c "the" 1468-6708-3-10.txt`  
   ![Image](Lab3_SSH_grep_-c_file.PNG)
