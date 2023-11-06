@@ -110,7 +110,8 @@ I'm choosing the `grep` command.
   The current directory is `/c/users/kmaas/documents/github/docsearch/technical`.  
   Command: `grep -r "U.S. national" .`  
   ![Image](Lab3_SSH_grep_-r_dir.PNG)\
-  The command printed two lines. These two lines contained "U.S. national", the specified phrase, and are from two different files in the current directory, the specified directory, and its sub-directories. This option is useful because it allows the user to run `grep` on all the files in a directory and its sub-directories. This option could be used to check whether you deleted all instances of a certain phrase in a directory and its sub-directories. If `grep -r _specified phrase_ .` prints nothing, then you successfully deleted all instances of that specfied phrase from a directory and its sub-directories.
+  The command printed two lines. These two lines contained "U.S. national", the specified phrase, and are from two different files in the current directory, the specified directory, and its sub-directories. This option is useful because it allows the user to run `grep` on all the files in a directory and its sub-directories. This option could be used to check whether you deleted all instances of a certain phrase in a directory and its sub-directories. If `grep -r _specified phrase_ .` prints nothing, then you successfully deleted all instances of that specfied phrase from a directory and its sub-directories.  
+_**Note! I specify -r in addition to future options because otherwise `grep` wouldn't work with a directory as input.**_
 * `-v` (prints all the lines in the specified file that did not contain the specified phrase):  
   [Source](https://en.wikibooks.org/wiki/Grep)
   * File:
@@ -118,7 +119,7 @@ I'm choosing the `grep` command.
   ![Image](Lab3_SSH_less.PNG)\
   Note that, in the image above, the first line in the file containing text is "Background".  
   ![Image](Lab3_SSH_grep_-v_file.PNG)\
-  Note that, in the image above, the line containing "Background" is missing.\  
+  Note that, in the image above, the line containing "Background" is missing.  
   This command printed all the lines in 1471-2180-1-29.txt, the specified file, that did not contain "Background", the specified phrase. This option is useful because it allows the user to `grep` for unique lines in a specified file. This option could be used to create another file that does not contain the specified phrase.  
   * Directory:
   The current directory is `~/Documents/GitHub/docsearch/technical/biomed`.  
@@ -129,7 +130,7 @@ I'm choosing the `grep` command.
   [Source](https://en.wikibooks.org/wiki/Grep)  
   * File:
   Command: `grep -c "the" 1468-6708-3-10.txt`  
-  ![Image](Lab3_SSH_grep_-c_file.PNG)
+  ![Image](Lab3_SSH_grep_-c_file.PNG)  
   This command printed the number of lines in 1468-6708-3-10.txt, the specified file, that contained "the", the specified phrase. This command is useful for getting the counts of the lines that contain a phrase in a file. This option could be used as a general way to check progress in removing a specified phrase from a file.  
   * Directory:
   The current directory is `~/Documents/GitHub/docsearch/technical`.  
@@ -146,4 +147,4 @@ I'm choosing the `grep` command.
   The current directory is `~/Documents/GitHub/docsearch/technical`.  
   Command: `grep -r -n "Background" .`  
   ![Image](Lab3_SSH_grep_-n_dir.PNG)\
-  This command prints the line and file in which "Background", the specified phrase, appears in the current directory, the specified directory, and its sub directories. This command is useful for checking where exactly  a phrase is in a batch of files. This option could be used in a script to search specifically for files that have a certain phrase on a certain line.
+  This command prints the line and file in which "Background", the specified phrase, appears in the current directory, the specified directory, and its sub-directories. This command is useful for checking where exactly a phrase is in a batch of files. This option could be used in a script to search specifically for files that have a certain phrase on a certain line.
