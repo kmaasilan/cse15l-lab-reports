@@ -13,7 +13,7 @@
 * Keys pressed: \
   `cd lab7` `<enter>`. The `cd` command allows me to change into a specified directory. I specify the directory to be lab7 because I need to compile and run some files within this directory.\
   `<ctrl>r` `javac` `<enter>`. The `<ctrl>r` command allows me to search my terminal history. The JUnit compilation line for `*.java` comes up when using the search term `javac`, so I press enter and compile `ListExamples.java` and `ListExamplesTests.java`.\
-  `<ctrl>r` `java -` `<enter>`. The `<ctrl>r` command allows me to search my terminal history. The JUnit execution line for `ListExamplesTests` comes up when using the search term `java -`, so I press enter and execute `ListExamplesTests`.\
+  `<ctrl>r` `java -` `<enter>`. The `<ctrl>r` command allows me to search my terminal history. The JUnit execution line for `ListExamplesTests` comes up when using the search term `java -`, so I press enter and execute `ListExamplesTests`.
 ## 7. Edit the code file `ListExamples.java` to fix the failing test
 * Screenshot: \
   ![Image](lab7_7.PNG)
