@@ -5,13 +5,13 @@
 * Keys pressed: `<ctrl>r` `ssh` `<enter>`. The `<ctrl>r` command allows me to search my terminal history. My ieng6 username comes up when using the search term `ssh`, so I press enter and login to the remote system.
 ## 5. Clone your fork of the repository from your Github account
 * Screenshot: \
-  ![Image](lab7_5.PNG)\
+  ![Image](lab7_5.PNG)
 * Keys pressed: `git clone ` `<ctrl>v` `<enter>`. The `git clone ` command allows me to clone a specified git repository. I specify the git repository with an SSH URL which I had copied earlier and pasted here using `<ctrl>v`. 
 ## 6. Run the tests, demonstrating that they fail
 * Screenshot: \
   ![Image](lab7_6.PNG)
 * Keys pressed: \
-  `cd lab7` `<enter>`. The `cd` command allows me to change into a specified directory. I specify the directory to be lab7 because I need to compile and run some files within this directory.\ 
+  `cd lab7` `<enter>`. The `cd` command allows me to change into a specified directory. I specify the directory to be lab7 because I need to compile and run some files within this directory.\
   `<ctrl>r` `javac` `<enter>`. The `<ctrl>r` command allows me to search my terminal history. The JUnit compilation line for `*.java` comes up when using the search term `javac`, so I press enter and compile `ListExamples.java` and `ListExamplesTests.java`.\
   `<ctrl>r` `java -` `<enter>`. The `<ctrl>r` command allows me to search my terminal history. The JUnit execution line for `ListExamplesTests` comes up when using the search term `java -`, so I press enter and execute `ListExamplesTests`.\
 ## 7. Edit the code file `ListExamples.java` to fix the failing test
