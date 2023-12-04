@@ -10,7 +10,7 @@
 
 
 
-My bash script works to accomplish the auto grading goals outlined in the week 6 lab ([Here's a link to the week 6 lab](https://ucsd-cse15l-f23.github.io/week/week6/)). However, instead of cloning the specified github repository into a folder strictly named `student-submissions`, my script allows the user to specify part of the name of the folder the github repository will be cloned into. The command used to run this bash script from the terminal while in the altered-list-examples-grader directory is `bash grade.sh <the link of the github repository you want to grade> <part of the name of the folder that will have the github repository's content copied into it>`. \
+My bash script works to accomplish the auto grading goals outlined in the week 6 lab ([Here's a link to the week 6 lab](https://ucsd-cse15l-f23.github.io/week/week6/)). However, instead of cloning the specified github repository into a folder strictly named `student-submissions`, my script allows the user to specify part of the name of the folder the github repository will be cloned into. The command used to run this bash script from the terminal while in the `altered-list-examples-grader` directory is `bash grade.sh <the link of the github repository you want to grade> <part of the name of the folder that will have the github repository's content copied into it>`. \
 Bash script code:
 ```
  1 CPATH='.;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar'
@@ -86,31 +86,55 @@ Screenshot of successful output when using the command `bash grade.sh https://gi
 ![Image](Lab5_successOutput2.png) \
 Screenshot of error output when using the command `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected submission-folder`: \
 ![Image](Lab5_failureOutput2.png) \
-You can see my Visual Studio Code file browser, my present working directory (`~/OneDrive/Documents/Lab_Report_5/altered-list-grader`), and the entire error message in the screenshots above. \
-I expected `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected submission-folder` to give the same output as `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected a-submission-folder` because the github repository I'm cloning didn't change. The only difference between these two commands is the name of the folder that will have the github repository's content copied into it. I suspect this is an issue with my grade.sh bash script. I'm particularly suspicous of the cp command in line 51 that copies the lib folder into all other folders with a "-" in their name (`cp -r lib ./*-*/`). I specified the dash because I append `-area` to the end of the folder name specified in the command. Also, I don't want to copy the lib folder into the lib folder. 
+You can see my Visual Studio Code file browser, my present working directory (`~/OneDrive/Documents/Lab_Report_5/altered-list-examples-grader`), and the entire error message in the screenshots above. \
+I expected `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected submission-folder` to give the same output as `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected a-submission-folder` because the github repository I'm cloning didn't change. The only difference between these two commands is the name of the folder that will have the github repository's content copied into it. I suspect this is an issue with my `grade.sh` bash script. I'm particularly suspicous of the cp command in line 51 that copies the lib folder into all other folders with a "-" in their name (`cp -r lib ./*-*/`). I specified the dash because I append `-area` to the end of the folder name specified in the command. Also, I don't want to copy the lib folder into the lib folder. 
 I'm particularly suspicous of this line because what gets copied where changes depending on the name I specify for the folder that will have the github repository's content copied into it. You can see this in the screen shots I posted above. The file structure after 
 running `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected submission-folder` is different than the file structure I get after running `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected a-submission-folder`, but I'm not
 quite sure why that is. \
 Any help would be greatly appreciated!
+
+
+
+
 ***
 
 
 
 
-2. A response from a TA asking a leading question or suggesting a command to try: 
+2. A response from a TA asking a leading question or suggesting a command to try:
+
+
+
+
 ***
+
+
+
+
 Hello Maasilan! \
 I think you're misunderstanding how the cp command works. Read more about the cp command [here at this link](https://www.geeksforgeeks.org/cp-command-linux-examples/). Also try to think about what `*` does; maybe run the command `echo * `! \
 Hopefully this helps! \
 Sincerely, \
 Nalisaam 
+
+
+
+
 ***
 
 
 
 
-3. Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is: 
+3. Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is:
+
+
+
+
 ***
+
+
+
+
 ![Image](Lab5_TASuggestion.png) \
 It looks like `*` expansions are listed in alphabetical order. Furthermore, according to [this link](https://serverfault.com/questions/122737/in-bash-are-wildcard-expansions-guaranteed-to-be-in-order), 
 `*` expansions are listed in alphabetical order. \
@@ -119,21 +143,37 @@ Also, you were right that I was misunderstanding the cp command. Apparrently if 
 `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected a-submission-folder` leads to `cp -r lib ./*-*/`
 expanding into `cp -r lib a-submission-folder-area grading-area`. Thus, both `lib` and `a-submission-folder-area` are copied into `grading-area`, so when 
 `grade.sh` assumes `lib` is in `grading area` and runs... 
+
+
+
+
 ```
 cd grading-area
 
 javac -cp $CPATH *.java
 java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit_output.txt
 ```
+
+
+
+
 in lines 53-56, the assumption is correct and the script works. However, my second command `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected a-submission-folder` causes `cp -r lib ./*-*/` to expand into 
 `cp -r lib grading-area submission-folder-area`. Thus, both `lib` and `grading-area` are copied into `submission-folder-area`, so when
 `grade.sh` assumes `lib` is in `grading` area and runs...
+
+
+
+
 ```
 cd grading-area
 
 javac -cp $CPATH *.java
 java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit_output.txt
 ```
+
+
+
+
 in lines 53-56, the assumption is wrong and the script fails. This is why our terminal output after running
 `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected submission-folder` is: \
 ![Image](Lab5_failureOutput2.png) \
@@ -142,6 +182,10 @@ when we compile `TestListExamples.java`. In fact, it clearly states `TestListExa
 package org.junit does not exist`. Without the lib directory it can't compile 
 `TestListExamples.java`, so it prints all these errors relating to methods and other things 
 defined in the .jar files in the `lib` repository. Some examples include:
+
+
+
+
 ```
 TestListExamples.java:19: error: cannot find symbol
         assertEquals(expected, merged);
@@ -149,7 +193,15 @@ TestListExamples.java:19: error: cannot find symbol
   symbol:   method assertEquals(List<String>,List<String>)
   location: class TestListExamples
 ```
+
+
+
+
 and...
+
+
+
+
 ```
 TestListExamples.java:22: error: cannot find symbol
     @Test(timeout = 1000)
@@ -157,20 +209,40 @@ TestListExamples.java:22: error: cannot find symbol
   symbol:   class Test
   location: class TestListExamples
 ```
+
+
+
+
 Without the lib repository, methods and things like `assertEquals` and `@Test` make no sense
 to the compiler. 
+
+
+
+
 ***
 
 
 
 
 4. All the information needed about the setup including:
+
+
+
+
 ***
+
+
+
+
 * The file & directory structure needed: \
   ![Image](Lab5_reqDirStruct.PNG) \
   This is the required file and directory structure needed to run grade.sh.
 * The contents of each file before fixing the bug:
   The grade.sh code was already posted in a code block above, but here it is again :) ...
+
+
+
+
   ```
    1 CPATH='.;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar'
    2 
@@ -274,12 +346,25 @@ to the compiler.
       }
   }
   ```
+
+
+
+
   junit_output.txt is empty, and the contents of the remaining files were cloned from [the github repository linked here](https://github.com/ucsd-cse15l-f22/list-methods-corrected). 
 * The full command line (or lines) you ran to trigger the bug:
   `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected submission-folder`
 * A description of what to edit to fix the bug:
   At line 51, change `cp -r lib ./*-*/` to `cp -r lib ./grading-area`.
+
+
+
+  
 ***
+
+
+
+
+
 
 ## Part 1 - Reflection
 I learned about the jdb debugger in the second half of this quarter. Basically, I used the
