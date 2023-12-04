@@ -1,6 +1,6 @@
 # Lab Report 5 - Putting it All Together (Week 9)
 ## Part 1 - Debugging Scenario
-1. Original post from a student with a screenshot showing a symptom and a description of a guess at the bug/some sense of what the failure-inducing input is:
+1.Original post from a student with a screenshot showing a symptom and a description of a guess at the bug/some sense of what the failure-inducing input is:
 
 
 
@@ -101,7 +101,7 @@ Any help would be greatly appreciated!
 
 
 
-2. A response from a TA asking a leading question or suggesting a command to try:
+2.A response from a TA asking a leading question or suggesting a command to try:
 
 
 
@@ -125,7 +125,7 @@ Nalisaam
 
 
 
-3. Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is:
+3.Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is:
 
 
 
@@ -224,7 +224,7 @@ to the compiler.
 
 
 
-4. All the information needed about the setup including:
+4.All the information needed about the setup including:
 
 
 
@@ -366,7 +366,7 @@ to the compiler.
 
 
 
-## Part 1 - Reflection
+## Part 2 - Reflection
 I learned about the jdb debugger in the second half of this quarter. Basically, I used the
 jdb debugger to fix java programs. I thought it was interesting how jdb allowed me 
 to step through java programs and collect more information about bugs. Specifically,
