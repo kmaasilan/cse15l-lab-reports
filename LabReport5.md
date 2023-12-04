@@ -1,7 +1,7 @@
 # Lab Report 5 - Putting it All Together (Week 9)
 ## Part 1 - Debugging Scenario
 1. Original post from a student with a screenshot showing a symptom and a description of a guess at the bug/some sense of what the failure-inducing input is: \
-*** \
+___
 My bash script works to accomplish the auto grading goals outlined in the week 6 lab ([Here's a link to the week 6 lab](https://ucsd-cse15l-f23.github.io/week/week6/)). However, instead of cloning the specified github repository into a folder strictly named `student-submissions`, my script allows the user to specify part of the name of the folder the github repository will be cloned into. The command used to run this bash script from the terminal while in the altered-list-examples-grader directory is `bash grade.sh <the link of the github repository you want to grade> <part of the name of the folder that will have the github repository's content copied into it>`. \
 Bash script code:
 ```
