@@ -87,7 +87,7 @@ Screenshot of successful output when using the command `bash grade.sh https://gi
 Screenshot of error output when using the command `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected submission-folder`: \
 ![Image](Lab5_failureOutput2.png) \
 You can see my Visual Studio Code file browser, my present working directory (`~/OneDrive/Documents/Lab_Report_5/altered-list-examples-grader`), and the entire error message in the screenshots above. \
-I expected `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected submission-folder` to give the same output as `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected a-submission-folder` because the github repository I'm cloning didn't change. The only difference between these two commands is the name of the folder that will have the github repository's content copied into it. I suspect this is an issue with my `grade.sh` bash script. I'm particularly suspicous of the cp command in line 51 that copies the lib folder into all other folders with a "-" in their name (`cp -r lib ./*-*/`). I specified the dash because I append `-area` to the end of the folder name specified in the command. Also, I don't want to copy the lib folder into the lib folder. 
+I expected `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected submission-folder` to give the same output as `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected a-submission-folder` because the github repository I'm cloning didn't change. The only difference between these two commands is the name of the folder that will have the github repository's content copied into it. I suspect this is an issue with my `grade.sh` bash script. I'm particularly suspicous of the cp command in line 51 that copies the lib folder into all other folders (I'm assuming `cp -r folder1 folder2 folder3` works to copy `folder1` into both `folder2` and `folder3`) with a "-" in their name (`cp -r lib ./*-*/`). I specified the dash because I append `-area` to the end of the folder name specified in the command, and I only want to copy lib into every directory in the present working directory except for the lib directory (which doesn't contain a "-" in its name).
 I'm particularly suspicous of this line because what gets copied where changes depending on the name I specify for the folder that will have the github repository's content copied into it. You can see this in the screen shots I posted above. The file structure after 
 running `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected submission-folder` is different than the file structure I get after running `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected a-submission-folder`, but I'm not
 quite sure why that is. \
@@ -174,7 +174,7 @@ java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit_output.txt
 
 
 
-in lines 53-56, the assumption is wrong and the script fails. This is why our terminal output after running
+in lines 53-56, the assumption is wrong and the script fails. This is why my terminal output after running
 `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected submission-folder` is: \
 ![Image](Lab5_failureOutput2.png) \
 All of these errors stem from the fact that the `lib` folder isn't in the `grading-area` directory
@@ -237,7 +237,7 @@ to the compiler.
 * The file & directory structure needed: \
   ![Image](Lab5_reqDirStruct.PNG) \
   This is the required file and directory structure needed to run grade.sh.
-* The contents of each file before fixing the bug:
+* The contents of each file before fixing the bug: \
   The grade.sh code was already posted in a code block above, but here it is again :) ...
 
 
@@ -313,7 +313,7 @@ to the compiler.
   67 
   68 echo $count out of 5 tests passed
   ```
-  The content of files other than grade.sh is irrelevant, but I have posted some these files' contents below... \
+  The contents of files other than grade.sh are irrelevant, but I have posted some of these files' contents below... \
   TestListExamples.java:
   ```
   import static org.junit.Assert.*;
@@ -351,9 +351,9 @@ to the compiler.
 
 
   junit_output.txt is empty, and the contents of the remaining files were cloned from [the github repository linked here](https://github.com/ucsd-cse15l-f22/list-methods-corrected). 
-* The full command line (or lines) you ran to trigger the bug:
+* The full command line (or lines) you ran to trigger the bug: \
   `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected submission-folder`
-* A description of what to edit to fix the bug:
+* A description of what to edit to fix the bug: \
   At line 51, change `cp -r lib ./*-*/` to `cp -r lib ./grading-area`.
 
 
